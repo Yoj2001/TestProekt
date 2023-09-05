@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yntreq Erkir</title>
+</head>
+{% if Country %}
+    <ul>
+    {% for country in Country %}
+        <li><a href="{% url 'my_dj:detail' country.id %}">{{country}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>NO COUNTRIES</p>
+{% endif %}
+</html>
